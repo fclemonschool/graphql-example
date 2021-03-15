@@ -1,0 +1,15 @@
+type Coffee {
+    id: ID!
+    origin: String!
+    aroma: String!
+    name: String!
+}
+
+type Query {
+    findAllCoffees: [Coffee]!
+    countCoffees: Int!
+}
+
+type Mutation {
+    addCoffee(origin: String!, aroma: String!, name: String!) : Coffee!
+}

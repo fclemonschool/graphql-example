@@ -1,0 +1,16 @@
+type Cafe {
+    id: ID!
+    name: String!
+    coffeeList: [ID]!
+}
+
+extend type Query {
+    findAllCafes: [Cafe]!
+    countCafes: Int!
+}
+
+extend type Mutation {
+    addCafe(name: String!, coffeeList: [ID]!): Cafe!
+    deleteCafe(id: ID!): Boolean
+    updateCafe(id: ID!, name: String!, coffeeList: [ID]!): Cafe!
+}
